@@ -1,6 +1,6 @@
 .ToDOList__list {
   margin: auto;
-  width: 80%;
+  width: 100%;
   position: relative;
 }
 .ToDOList__list ul {
@@ -37,6 +37,7 @@
 }
 .done__btn {
   display: inline-block;
+  float: right;
   background-color: initial;
   border: none;
 }

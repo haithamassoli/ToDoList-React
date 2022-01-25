@@ -56,17 +56,14 @@ class Item extends Component {
               className="far fa-trash-alt"
             ></i>
             <i onClick={this.editHandler} className="fas fa-edit"></i>
-          </li>
-          {this.state.check ? (
-            ""
-          ) : (
             <button className="done__btn">
               <i
                 onClick={this.checkHandler}
                 className="fas fa-check-circle"
               ></i>
             </button>
-          )}
+          </li>
+          {this.state.check ? "" : <div></div>}
         </>
       );
     }

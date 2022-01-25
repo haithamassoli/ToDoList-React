@@ -20,14 +20,13 @@
   flex-direction: column;
   justify-content: center;
   min-height: 93vh;
-  margin: 150px auto;
-  font-family: "Lato", sans-serif;
-  width: 30%;
+  margin: 10px auto;
+  width: 80%;
 }
 
 .container {
-  margin: 30px auto;
-  width: 350px;
+  margin: 0px auto;
+  width: 90vw;
 }
 
 .Balance {
@@ -53,6 +52,7 @@
 .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
+  width: 100%;
   padding: 15px;
   display: flex;
   justify-content: space-between;

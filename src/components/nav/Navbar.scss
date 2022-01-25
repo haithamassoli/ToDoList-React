@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 $navbar_font_size: 1rem;
-$main_text_color: rgb(35, 110, 223);
+$main_text_color: rgb(0, 38, 255);
 $navbar_background_color: rgba(
   $color: #000000,
   $alpha: 0.4,
@@ -15,7 +15,7 @@ $navbar_background_color: rgba(
 .navbar {
   font-size: $navbar_font_size;
   //main navbar styling
-  position: fixed;
+  // position: fixed;
   @include flex-between;
   width: 100vw;
   padding: 2rem 10vw;
@@ -32,14 +32,12 @@ $navbar_background_color: rgba(
     &__title {
       display: block;
       text-align: center;
-      font-style: italic;
-      font-family: "Road Rage", cursive;
+      color: rgb(0, 132, 255);
       font-size: 2rem;
     }
     &__text {
       color: red;
       text-decoration: none;
-      font-family: "Pacifico", cursive;
     }
   }
 
