@@ -1,22 +1,46 @@
 import React, { useState } from "react";
-import data from "./data";
-import List from "./List";
+import "./App.css";
+import Navbar from "./components/nav/Navbar";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import ToDoList from "./components/ToDO/ToDoList";
+// import Expense from "./components/expenseTracker/Expense";
+import ExpenseTracker from "./components/UI/ExpenseTrackerUI/ExpenseTrackerUI";
+
 function App() {
-  const [pepole, setPepole] = useState(data);
+  // Expenses State
+  const [income, setIncome] = useState(0);
+  const [expense, setExpense] = useState(0);
+  const [transactions, setTransactions] = useState([]);
+  const [total, setTotal] = useState(expense + income);
+  const [amount, setAmount] = useState(0);
   return (
-    <main>
-      <section className="container">
-        <h3>birthdays today</h3>
-        <List pepole={pepole} />
-        <button
-          onClick={() => {
-            setPepole([]);
-          }}
-        >
-          clear all
-        </button>
-      </section>
-    </main>
+    <div className="app_container">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<ToDoList />} />
+          {/* <Route exact path="/expenses" element={<Expense />} /> */}
+          <Route
+            exact
+            path="/ExpenseTrackerUI"
+            element={
+              <ExpenseTracker
+                income={income}
+                expense={expense}
+                total={total}
+                setTotal={setTotal}
+                setIncome={setIncome}
+                setExpense={setExpense}
+                transactions={transactions}
+                setTransactions={setTransactions}
+                amount={amount}
+                setAmount={setAmount}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
